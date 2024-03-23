@@ -9,7 +9,7 @@ interface Props {
 
 const Navbar = (props: Props) => {
     return (
-        <div className=' h-vh10 w-full px-vw5 bg-navcolor absolute top-0 left-0 right-0  '>
+        <div className=' h-vh10 w-full px-vw5 bg-navcolor   '>
             <div className=' w-full h-full flex items-center justify-between'>
                 <img src={amlilaLogo} alt='amelia logo' className='w-vw10' />
                 <section className='flex items-center gap-vw3 text-white lg_:hidden'>
