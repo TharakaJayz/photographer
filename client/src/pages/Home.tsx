@@ -1,4 +1,6 @@
 import React from 'react'
+import ImageSlider from '../components/ImageSlider'
+import { images } from '../assets/Images'
 
 interface Props {
     
@@ -6,8 +8,8 @@ interface Props {
 
 const Home = (props: Props) => {
     return (
-        <div>
-            home
+        <div className='w-full '>
+            <ImageSlider  images={images} />
         </div>
     )
 }
