@@ -4,8 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        navcolor:"rgba(0,0,0,0.64)",
+        navcolor:"rgba(0,0,0,0.5)",
         primary:"#91AD8E",
+      },
+      transitionProperty:{
+        height: 'height',
       },
 
       screens: {
