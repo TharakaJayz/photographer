@@ -225,6 +225,7 @@ module.exports = {
         vw98: "98vw",
         vw99: "99vw",
         vw100: "100vw",
+        px75: "120px",
       }  ,    
     },
   },

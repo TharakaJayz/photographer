@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ImageSlider from '../components/ImageSlider'
 import { images } from '../assets/Images'
 
