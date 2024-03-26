@@ -17,6 +17,7 @@ module.exports = {
         "2xl_": { max: "1535px" },
 
         xl_: { max: "1279px" },
+        xl2_: { max: "1150px" },
 
         lg_: { max: "1023px" },
 
@@ -27,6 +28,7 @@ module.exports = {
         sm_: { max: "639px" },
       },
       spacing: {
+        px1: "1px",
         vh1: "1vh",
         vh2: "2vh",
         vh3: "3vh",
