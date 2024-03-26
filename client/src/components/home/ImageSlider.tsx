@@ -16,14 +16,18 @@ interface Props {
 
 const ImageSlider = ({ images }: Props) => {
   return (
-    <div className="w-full ">
+    <div className="w-full m-0 ">
       <Swiper
+      loop={true}
         autoplay={{
-          delay: 2500,
+          delay: 5500,
           disableOnInteraction: false,
         }}
-        navigation={true}
-        modules={[Pagination, Navigation,Autoplay]}
+
+        speed={1500}
+        
+        
+        modules={[Pagination,Autoplay]}
         className="mySwiper border w-full"
       >
         {images.map((singleImage) => (
@@ -32,7 +36,7 @@ const ImageSlider = ({ images }: Props) => {
             <img
               src={singleImage}
               alt="image_slider"
-              className="h-vh90 w-full object-cover object-center "
+              className="h-vh100 w-full object-cover object-center  sm_:h-vh50 md_:h-vh60 lg2_:h-vh80 lg_:h-vh80"
             />
           </SwiperSlide>
         ))}

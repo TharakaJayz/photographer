@@ -1,6 +1,8 @@
 
-import ImageSlider from '../components/ImageSlider'
-import { images } from '../assets/Images'
+import ImageSlider from '../components/home/ImageSlider'
+import { homeMemoryImage, images } from '../assets/Images'
+import HomeMemory from '../components/home/HomeMemory'
+import HomeService from '../components/home/HomeService'
 
 interface Props {
     
@@ -8,8 +10,10 @@ interface Props {
 
 const Home = (props: Props) => {
     return (
-        <div className='w-full '>
-            <ImageSlider  images={images} />
+        <div className='w-full flex flex-col'>
+            <ImageSlider  images={images} /> 
+             <HomeMemory  />
+             <HomeService />
         </div>
     )
 }
