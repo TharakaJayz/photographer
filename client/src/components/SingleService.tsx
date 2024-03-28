@@ -1,22 +1,23 @@
 import React from 'react'
 import { GiBigDiamondRing } from "react-icons/gi";
+import { serviceType } from './home/HomeService';
 
 interface Props {
     
 }
 
-const SingleService = (props: Props) => {
+const SingleService = (props: serviceType) => {
     return (
-        <div className='w-1/5 border flex items-center justify-center '>
+        <div className='w-1/4 sm_:w-full border border-gray-200 rounded-2xl bg-primary_light1 flex items-center justify-center py-vh5'>
             <div className='w-full px-vw2 py-vh2 flex flex-col items-center gap-vh1'>
-            <h4>Weddings</h4>
-            <section className='flex items-center justify-center w-full border border-red-500'>
-                <span className='h-px1 w-1/6 bg-black'></span>
-                <span><GiBigDiamondRing /></span>
-                <span className='h-px1 w-1/6 bg-black'></span>
+            <h4 className='font-bold text-xl capitalize text-service_svg_bg'> {props.topic}</h4>
+            <section className='flex items-center justify-center w-full  '>
+                <span className='h-px2 w-1/5 bg-gray-400'></span>
+                <span className='bg-service_svg_bg p-px3 rounded-2xl flex items-center justify-center text-white'>{props.svg}</span>
+                <span className='h-px2 w-1/5 bg-gray-400'></span>
                 
             </section>
-            <p className='w-full text-center'>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences</p>
+            <p className='w-full text-center'>{props.desc}</p>
         </div>
         </div>
     )
