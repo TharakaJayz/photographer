@@ -32,6 +32,7 @@ module.exports = {
         px1: "1px",
         px2: "1.5px",
         px3: "3px",
+        px200: "200px",
         vh1: "1vh",
         vh2: "2vh",
         vh3: "3vh",

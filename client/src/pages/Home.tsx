@@ -3,6 +3,8 @@ import ImageSlider from '../components/home/ImageSlider'
 import { homeMemoryImage, images } from '../assets/Images'
 import HomeMemory from '../components/home/HomeMemory'
 import HomeService from '../components/home/HomeService'
+import HomeSwiper from '../components/home/HomeSwiper'
+import HomeReview from '../components/home/HomeReview'
 
 interface Props {
     
@@ -14,6 +16,8 @@ const Home = (props: Props) => {
             <ImageSlider  images={images} /> 
              <HomeMemory  />
              <HomeService />
+             {/* <HomeSwiper/> */}
+             <HomeReview />
         </div>
     )
 }
