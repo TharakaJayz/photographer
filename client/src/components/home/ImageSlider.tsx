@@ -28,7 +28,7 @@ const ImageSlider = ({ images }: Props) => {
         
         
         modules={[Pagination,Autoplay]}
-        className="mySwiper border w-full"
+        className="mySwiper border w-full "
       >
         {images.map((singleImage) => (
           <SwiperSlide>
