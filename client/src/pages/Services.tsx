@@ -1,3 +1,5 @@
+import HeaderSection from "../components/HeaderSection"
+import HomeService from "../components/home/HomeService"
 
 
 interface Props {
@@ -6,8 +8,11 @@ interface Props {
 
 const Services = (props: Props) => {
     return (
-        <div>
-            service
+        <div className="w-full">
+             <HeaderSection imgUrl="" title="" desc=" " TextLogic = {false} />
+            <div className="w-full px-vw5">
+                <HomeService />
+            </div>
         </div>
     )
 }
