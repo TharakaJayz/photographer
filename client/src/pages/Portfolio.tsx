@@ -7,7 +7,7 @@ interface Props {
 const Portfolio = (props: Props) => {
     return (
         <div>
-            port folio
+            portfolio
         </div>
     )
 }

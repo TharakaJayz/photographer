@@ -1,4 +1,5 @@
 import React from 'react'
+import PageHederImg from '../components/PageHederImg'
 
 interface Props {
     
@@ -7,7 +8,7 @@ interface Props {
 const AboutUs = (props: Props) => {
     return (
         <div>
-            about us
+            <PageHederImg  />
         </div>
     )
 }
