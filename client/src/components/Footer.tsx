@@ -4,8 +4,8 @@ import { FaInstagram } from "react-icons/fa6";
 const Footer = () => {
     return (
         <div className="flex items-center justify-center w-full mt-vh5">
-            <div className="w-full px-vw5 py-vh10  bg-gradient-to-r from-primary_light2 from-10% via-white via-30% to-primary_light1 to-90%">
-                <div className=" w-full flex flex-col justify-center items-center gap-vh2 text-xl">
+            <div className="w-full px-vw5 ">
+                <div className=" flex flex-col gap-vh2 py-vh5 justify-center items-center">
                 <img src={amlilaLogo} alt='amelia logo' className='w-vw10 min-w-px75' />
                 <p className="w-full text-center">
                 ameliaweddingstudio@gmail.com</p>
