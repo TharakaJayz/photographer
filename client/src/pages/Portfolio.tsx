@@ -14,9 +14,10 @@ const Portfolio = (props: Props) => {
           <div className='w-full px-vw5'>
             <div className='w-full'>
                 <section className='w-full flex justify-between items-center'>
-                    <CategoryCard svg={""} />
-                    <CategoryCard svg={""} />
-                    <CategoryCard svg={""} />
+                    <CategoryCard svg={""} title='Weddings' desc='See our wedding albums'/>
+                    <CategoryCard svg={""} title='Engagements' desc='See our engagement albums'/>
+                    <CategoryCard svg={""} title='Pre-shoots' desc='See our pre-shoots albums'/>
+                    
                 </section>
             </div>
           </div>

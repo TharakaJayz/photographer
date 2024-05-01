@@ -8,6 +8,8 @@ module.exports = {
         primary:"rgba(145, 173, 142, 1)",
         primary_light1:"rgba(232,235,235,1)",
         primary_light2:"rgba(238, 241, 238)",
+        primary_light3:"rgb(63, 83, 65 ,0.5)",
+        primary_light4:"rgb(138, 156, 136 ,0.5)",
         service_svg_bg:"#4B5959",
       },
       transitionProperty:{
