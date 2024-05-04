@@ -1,17 +1,21 @@
 import React from 'react'
-import { images } from '../../assets/Images'
+import { images, images2 } from '../../assets/Images'
 
-type Props = {}
+type Props = {
+  title:string,
+  desc:string
+  imgUrl:string
+}
 
 const PortfolioCard = (props: Props) => {
   return (
-    <div className='w-p31 h-vh40 border border-red-500 '>
-    <div className='w-full'>
-        <section>
-            <h3>title</h3>
-            <h2>desc</h2>
+    <div className='w-p31 h-vh40   '>
+    <div className='w-full h-full flex flex-col justify-between'>
+        <section className='capitalize'>
+            <h3 >{props.title}</h3>
+            <h1 className='text-xl font-semibold '>{props.desc}</h1>
         </section>
-     <img src={images[0]} alt="" className='w-full h-vh20' />
+     <img src={props.imgUrl} alt="" className='w-full h-vh30 object-cover object-top' />
     </div>
      </div>
   )
