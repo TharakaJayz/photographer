@@ -4,6 +4,7 @@ import CategoryCard from '../components/portfolio/CategoryCard'
 import { images } from '../assets/Images'
 import { albums, albumTypes } from '../assets/details';
 import PortfolioCard from '../components/portfolio/PortfolioCard';
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,7 +22,7 @@ const Portfolio = (props: Props) => {
   return (
     <div className='w-full'>
       <HeaderSection imgUrl={images[1]} title="Portfolio" desc="this is portfolio page" TextLogic={true} />
-      <div className='w-full px-vw5'>
+      <div className='w-full px-vw5 bg'>
         <div className='w-full flex flex-col gap-vh5'>
           <section className='w-full flex justify-between items-center'>
             <CategoryCard svg={""} title={albumTypes[0]} onClickAction={setTypeFromCard} desc='See our wedding albums' />

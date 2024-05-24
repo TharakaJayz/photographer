@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import AboutUs from './pages/AboutUs';
 import Layout from './layout/Layout';
+import PortfolioSingle from './pages/PortfolioSingle';
 interface Props {
 
 }
@@ -31,6 +32,9 @@ const App = (props: Props) => {
         </Layout>} />
         <Route path='/portfolio' element={<Layout>
           <Portfolio />
+        </Layout>} />
+        <Route path='/portfolio/:albumId' element={<Layout>
+          <PortfolioSingle />
         </Layout>} />
       </Routes>
     </div>
