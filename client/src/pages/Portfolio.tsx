@@ -21,10 +21,10 @@ const Portfolio = (props: Props) => {
   }
   return (
     <div className='w-full'>
-      <HeaderSection imgUrl={images[1]} title="Portfolio" desc="this is portfolio page" TextLogic={true} />
+      <HeaderSection imgUrl={"https://www.danushkasenadeera.lk/wp-content/uploads/2022/10/01.jpg"} title="Portfolio" desc="Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc" TextLogic={true} />
       <div className='w-full px-vw5 bg'>
-        <div className='w-full flex flex-col gap-vh5'>
-          <section className='w-full flex justify-between items-center'>
+        <div className='w-full flex flex-col gap-vh5 '>
+          <section className='w-full flex justify-between items-center '>
             <CategoryCard svg={""} title={albumTypes[0]} onClickAction={setTypeFromCard} desc='See our wedding albums' />
             <CategoryCard svg={""} title={albumTypes[1]} onClickAction={setTypeFromCard} desc='See our engagement albums' />
             <CategoryCard svg={""} title={albumTypes[2]} onClickAction={setTypeFromCard} desc='See our pre-shoots albums' />
@@ -32,7 +32,7 @@ const Portfolio = (props: Props) => {
           </section>
 
           {(selectedType === "") && (
-            <section className='w-full flex flex-wrap justify-between items-center   gap-vh5  '>
+            <section className='w-full flex flex-wrap justify-between  items-center   gap-vh3 '>
 
               {albums.map((singleAlbum => {
 
@@ -43,7 +43,7 @@ const Portfolio = (props: Props) => {
           )}
 
           {(selectedType !== "") && (
-            <section className='w-full flex flex-wrap justify-start items-center   gap-vh5  '>
+            <section className='w-full flex flex-wrap justify-start items-center   gap-vh5 lg_:gap-vh2 lg_:justify-between '>
 
               {albums.map((singleAlbum => {
                     if(singleAlbum.type === selectedType){
