@@ -15,6 +15,8 @@ interface Props {
 }
 
 const ImageSlider = ({ images }: Props) => {
+
+  
   return (
     <div className="w-full m-0 ">
       <Swiper

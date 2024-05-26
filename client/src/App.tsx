@@ -31,10 +31,12 @@ const App = (props: Props) => {
 
         <Route path="/admin" element={<Login />} />
 
+          {localStorage.getItem("token") && (
 
         <Route path="/admin/home/slider" element={<AdminLayout>
           <AddHomeImages/>
         </AdminLayout>} />
+          )}
 
         
 
