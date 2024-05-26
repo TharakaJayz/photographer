@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs";
 
 import  userRoutes from "./routes/user";
 import homeRoutes from "./routes/home";
+import albumRoutes from "./routes/album";
 
 const app = express();
 app.use((cors()));
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 
 app.use("/auth",userRoutes);
 app.use("/home",homeRoutes);
+app.use("/album",albumRoutes);
 
 
 // app.post("/signUp", async (req,res)=>{

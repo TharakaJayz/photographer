@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import HeaderSection from '../components/HeaderSection'
 import CategoryCard from '../components/portfolio/CategoryCard'
 import { images } from '../assets/Images'
-import { albums, albumTypes } from '../assets/details';
+import {  albumTypes } from '../assets/details';
 import PortfolioCard from '../components/portfolio/PortfolioCard';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import axios from 'axios';
 
 
 
@@ -15,6 +17,27 @@ interface Props {
 
 const Portfolio = (props: Props) => {
   const [selectedType, setSelectedType] = useState<string>("");
+
+  const [albums,setAlbums] = useState<any>([]);
+
+const fetchAlbums = async()  =>{
+  try {
+
+    
+    const albums:any = await axios.get("http://localhost:8080/album/get_all_album");
+    setAlbums(albums.data);
+
+    console.log('albums from backend',albums);
+    
+  } catch (error) {
+    console.log("album fetch error",error)
+    return
+  }
+}
+
+  useEffect(() => {
+    fetchAlbums();
+  }, [])
 
   const setTypeFromCard = (value: string) => {
     setSelectedType(value);
@@ -34,9 +57,9 @@ const Portfolio = (props: Props) => {
           {(selectedType === "") && (
             <section className='w-full flex flex-wrap justify-between  items-center   gap-vh3 '>
 
-              {albums.map((singleAlbum => {
+              {albums.map(((singleAlbum:any) => {
 
-                return <PortfolioCard title={singleAlbum.type} desc={singleAlbum.name} imgUrl={singleAlbum.imgUrl} />
+                return <PortfolioCard title={singleAlbum.type} desc={singleAlbum.desc} imgUrl={singleAlbum.imgUrl}  id = {singleAlbum.id} />
               }))}
 
             </section>
@@ -45,10 +68,10 @@ const Portfolio = (props: Props) => {
           {(selectedType !== "") && (
             <section className='w-full flex flex-wrap justify-start items-center   gap-vh5 lg_:gap-vh2 lg_:justify-between '>
 
-              {albums.map((singleAlbum => {
+              {albums.map(((singleAlbum:any) => {
                     if(singleAlbum.type === selectedType){
 
-                      return <PortfolioCard title={singleAlbum.type} desc={singleAlbum.name} imgUrl={singleAlbum.imgUrl} />
+                      return <PortfolioCard title={singleAlbum.type} desc={singleAlbum.desc} imgUrl={singleAlbum.imgUrl} id = {singleAlbum.id} />
                     }
               }))}
 

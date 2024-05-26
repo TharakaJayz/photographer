@@ -42,15 +42,15 @@ let albumLength = maneeshaNethupaAlbum.length
     for (let i = 0; i < albumLength; i++) {
         if ((i < quotient) ) {
            
-            formatedAlbum = { ...formatedAlbum, one: [...formatedAlbum.one, maneeshaNethupaAlbum[i]] }
+            formatedAlbum = { ...formatedAlbum, one: [...formatedAlbum.one, album[i]] }
         } else if ((i >= quotient) && (i < (quotient * 2))) {
          
-            formatedAlbum = { ...formatedAlbum, two: [...formatedAlbum.two, maneeshaNethupaAlbum[i]] }
+            formatedAlbum = { ...formatedAlbum, two: [...formatedAlbum.two, album[i]] }
         } else {
-            formatedAlbum = { ...formatedAlbum, three: [...formatedAlbum.three, maneeshaNethupaAlbum[i]] }
+            formatedAlbum = { ...formatedAlbum, three: [...formatedAlbum.three, album[i]] }
         }
     }
-
+    console.log("formatAlbumHandler3",formatedAlbum)
     return formatedAlbum
 }
 
@@ -61,11 +61,13 @@ let albumLength = maneeshaNethupaAlbum.length
     for (let i = 0; i < albumLength; i++) {
         if ((i < quotient) ) {
          
-            formatedAlbum = { ...formatedAlbum, one: [...formatedAlbum.one, maneeshaNethupaAlbum[i]] }
+            formatedAlbum = { ...formatedAlbum, one: [...formatedAlbum.one, album[i]] }
         }  else {
-            formatedAlbum = { ...formatedAlbum, two: [...formatedAlbum.two, maneeshaNethupaAlbum[i]] }
+            formatedAlbum = { ...formatedAlbum, two: [...formatedAlbum.two, album[i]] }
         }
     }
+
+    console.log("formatAlbumHandler2",formatedAlbum)
 
     return formatedAlbum
 }
