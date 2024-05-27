@@ -55,7 +55,7 @@ const fetchAlbums = async()  =>{
           </section>
 
           {(selectedType === "") && (
-            <section className='w-full flex flex-wrap justify-between  items-center   gap-vh3 '>
+            <section className='w-full flex flex-wrap justify-start  items-center   gap-vh3 '>
 
               {albums.map(((singleAlbum:any) => {
 
