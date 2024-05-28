@@ -23,7 +23,7 @@ const getHomeImages = async()  =>{
 
         const imagesHome:any = await axios.get("http://localhost:8080/home/get_home_slider");
         setImages(imagesHome.data);
-        console.log("homeImages",imagesHome.data);
+       
         
     } catch (error) {
         

@@ -27,7 +27,7 @@ const fetchAlbums = async()  =>{
     const albums:any = await axios.get("http://localhost:8080/album/get_all_album");
     setAlbums(albums.data);
 
-    console.log('albums from backend',albums);
+    // console.log('albums from backend',albums);
     
   } catch (error) {
     console.log("album fetch error",error)

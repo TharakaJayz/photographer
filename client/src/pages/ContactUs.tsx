@@ -20,7 +20,7 @@ const ContactUs = (props: Props) => {
     const {register,handleSubmit,formState:{errors}}  = useForm<ContactForm>();
 
     const submitHandler = handleSubmit((data)=>{
-      console.log("This is submitted data",data)
+      // console.log("This is submitted data",data)
     })
 
     return (
