@@ -12,6 +12,7 @@ import Quote from "./pages/Quote";
 import Login from "./pages/admin/Login";
 import AdminLayout from "./layout/AdminLayout";
 import AddHomeImages from "./pages/admin/AddHomeImages";
+import AddSingleAlbum from "./pages/admin/AddSingleAlbum";
 interface Props {}
 
 const App = (props: Props) => {
@@ -32,10 +33,17 @@ const App = (props: Props) => {
         <Route path="/admin" element={<Login />} />
 
           {localStorage.getItem("token") && (
+            <>
 
         <Route path="/admin/home/slider" element={<AdminLayout>
           <AddHomeImages/>
         </AdminLayout>} />
+          
+        <Route path="/admin/home/album" element={<AdminLayout>
+          <AddSingleAlbum/>
+        </AdminLayout>} />
+
+        </>
           )}
 
         
