@@ -50,7 +50,7 @@ let albumLength = maneeshaNethupaAlbum.length
             formatedAlbum = { ...formatedAlbum, three: [...formatedAlbum.three, album[i]] }
         }
     }
-    console.log("formatAlbumHandler3",formatedAlbum)
+    // console.log("formatAlbumHandler3",formatedAlbum)
     return formatedAlbum
 }
 
@@ -67,7 +67,7 @@ let albumLength = maneeshaNethupaAlbum.length
         }
     }
 
-    console.log("formatAlbumHandler2",formatedAlbum)
+    // console.log("formatAlbumHandler2",formatedAlbum)
 
     return formatedAlbum
 }

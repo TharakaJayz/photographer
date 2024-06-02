@@ -25,6 +25,7 @@ const fetchAlbums = async()  =>{
 
     
     const albums:any = await axios.get("http://localhost:8080/album/get_all_album");
+    console.log("albums",albums)
     setAlbums(albums.data);
 
     // console.log('albums from backend',albums);
@@ -57,9 +58,9 @@ const fetchAlbums = async()  =>{
           {(selectedType === "") && (
             <section className='w-full flex flex-wrap justify-start  items-center   gap-vh3 '>
 
-              {albums.map(((singleAlbum:any) => {
+              {albums.map(((singleAlbum:any ,index:any) => {
 
-                return <PortfolioCard title={singleAlbum.type} desc={singleAlbum.desc} imgUrl={singleAlbum.imgUrl}  id = {singleAlbum.id} />
+                return <PortfolioCard title={singleAlbum.type} desc={singleAlbum.desc} imgUrl={singleAlbum.imgUrl}  id = {singleAlbum.id} keyIndex={index}/>
               }))}
 
             </section>
