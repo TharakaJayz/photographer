@@ -1,14 +1,29 @@
 import { NextFunction, Request, Response } from "express";
 import SingleAlbum from "../models/album";
 
+
+
+
+export type singleAlbumType = {
+    albumType:string,
+    boyName:string,
+    girlName:string,
+    headerImage:string,
+    images:Array<string>,
+    titleImage:string
+}
+
 export const createAlbum = async(req:Request,res:Response,next:NextFunction) =>{
 
     const albumType = req.body.albumType;
-    const albumTitle = req.body.albumTitle;
-    const albumHeaderImg = req.body.albumHeaderImg;
+    const boyName = req.body.boyName;
+    const girlName = req.body.girlName;
+    const albumTitle = `${boyName} & ${girlName}`;
+    const albumHeaderImg = req.body.headerImage;
+    const titleImage = req.body.titleImage;
     const images:[] = req.body.images;
 
-    if(!albumType || !albumTitle || !albumHeaderImg || !images){
+    if(!albumType || !titleImage || !albumHeaderImg || !images || !girlName || !boyName ){
         res.status(400).send("you are missing some required properties");
         return
     }
@@ -18,13 +33,14 @@ export const createAlbum = async(req:Request,res:Response,next:NextFunction) =>{
         albumTitle:albumTitle,
         albumHeaderImg:albumHeaderImg,
         images:images,
-        isActive:true
+        isActive:true,
+        titleImage:titleImage
     });
 
 
     try {
 
-        const albumCreateResponse = await album.save();
+         await album.save();
         res.sendStatus(200);
         return;
         
@@ -46,7 +62,7 @@ export const getAllSingleAlbums = async(req:Request,res:Response,) =>{
             (singleAlbum)=> { return{
                 type:singleAlbum.albumType,
                 desc:singleAlbum.albumTitle,
-                imgUrl:singleAlbum.albumHeaderImg,
+                imgUrl:singleAlbum.titleImage,
                 id:singleAlbum._id
             }}
     
@@ -77,3 +93,4 @@ export const getSingleAlbumById = async(req:Request,res:Response)  =>{
         return
     }
 }
+

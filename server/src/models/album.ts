@@ -15,6 +15,10 @@ const Schema = new mongoose.Schema({
         type: String,
         required: true
     },
+    titleImage: {
+        type: String,
+        required: true
+    },
     images: {
         type: Array,
         required: true
