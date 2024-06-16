@@ -9,16 +9,21 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Wrapper } from "../Wrapper";
+import Loading from "../Loading";
 
 interface Props {
   images: string[];
+  loading:boolean
 }
 
-const ImageSlider = ({ images }: Props) => {
+const ImageSlider = ({ images,loading }: Props) => {
 
   
   return (
-    <div className="w-full m-0 ">
+    <>
+    <Wrapper extraStyles={`w-full m-0 ${loading ? 'opacity-0':''}`}>
+     {true && (
       <Swiper
       loop={true}
         autoplay={{
@@ -32,10 +37,11 @@ const ImageSlider = ({ images }: Props) => {
         modules={[Pagination,Autoplay]}
         className="mySwiper border w-full "
       >
-        {images.map((singleImage) => (
+        {images.map((singleImage,index) => (
           <SwiperSlide>
             {" "}
             <img
+            key={index}
               src={singleImage}
               alt="image_slider"
               className="h-vh100 w-full object-cover object-center  sm_:h-vh50 md_:h-vh60 lg2_:h-vh80 lg_:h-vh80"
@@ -43,7 +49,14 @@ const ImageSlider = ({ images }: Props) => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </div>
+     ) } 
+    </Wrapper>
+    {
+                    loading && (
+                        <Loading />
+                    )
+                }
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import HeaderSection from '../components/HeaderSection'
 import { images } from '../assets/Images';
 import { FaPhone } from "react-icons/fa6";
 import { useForm } from 'react-hook-form';
+import { Wrapper } from '../components/Wrapper';
 interface Props {
     
 }
@@ -24,7 +25,7 @@ const ContactUs = (props: Props) => {
     })
 
     return (
-        <div className='w-full '>
+        <Wrapper >
           <HeaderSection imgUrl={images[0]} title="Contact Us" desc="Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc " TextLogic = {true} />
           <div className='w-full px-vw5 '>
             <section className='w-full flex items-center justify-center '>
@@ -77,7 +78,7 @@ const ContactUs = (props: Props) => {
               </form>
             </section>
           </div>
-        </div>
+        </Wrapper>
     )
 }
 

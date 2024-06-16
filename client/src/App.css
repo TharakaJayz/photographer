@@ -12,3 +12,88 @@
     
 }
 
+ .home_service_animation{
+    animation:fade-in linear;
+    animation-timeline: view();
+    animation-range-start:contain;
+    animation-range-end:400px;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1 !important;
+}
+ .home_memories_animation{
+    animation:fade-in linear;
+    animation-timeline: view();
+    animation-range-start:50px;
+    animation-range-end:400px;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1 !important;
+}
+ .portfolio_single_animation{
+    animation:fade-in linear;
+    animation-timeline: view();
+    animation-range-start:100px;
+    animation-range-end:200px;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1 !important;
+}
+ .portfolio_single_portfolio_animation{
+    animation:fade-in linear;
+    animation-timeline: view();
+    animation-range-start:100px;
+    animation-range-end:200px;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1 !important;
+}
+
+@keyframes fade-in {
+    
+    to {scale:1 ;opacity: 1;}
+}
+
+
+@media  (min-width:1200px) {
+
+
+    .about_animation{
+
+        animation:slide-in linear;
+        animation-timeline: view();
+        animation-range-start:10px;
+        animation-range-end:400px;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1 !important;
+    
+    }
+
+    @keyframes slide-in {
+        from {margin-left: -20px;}
+    
+        to {
+            margin-left: 0;
+        }
+    }
+    
+}
+@media  (max-width:1200px) {
+
+.about_animation{
+
+    animation:slide-in linear;
+    animation-timeline: view();
+    animation-range-start:10px;
+    animation-range-end:400px;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1 !important;
+
+}
+
+
+@keyframes slide-in {
+    
+
+    to {
+        opacity: 1;
+    }
+}
+
+}

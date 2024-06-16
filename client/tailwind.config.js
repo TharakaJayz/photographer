@@ -23,6 +23,7 @@ module.exports = {
 
         
         xl2_: { max: "1150px" },
+        xl3_: { max: "1200px" },
        
 
         lg_: { max: "1023px" },

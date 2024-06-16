@@ -15,15 +15,16 @@ interface Props {
 const Home = (props: Props) => {
 
     const [images,setImages] = useState([]);
-
+    const [isLoading, setIsLoading] = useState(false);
     
 const getHomeImages = async()  =>{
+    setIsLoading(true);
 
     try {
 
         const imagesHome:any = await axios.get("http://localhost:8080/home/get_home_slider");
         setImages(imagesHome.data);
-       
+       setIsLoading(false);
         
     } catch (error) {
         
@@ -38,7 +39,7 @@ useEffect(() => {
 }, [])
     return (
         <div className='w-full flex flex-col'>
-            <ImageSlider  images={images} /> 
+            <ImageSlider   images={images} loading = {isLoading} /> 
              <HomeMemory  />
              <HomeService />
              {/* <HomeSwiper/> */}
