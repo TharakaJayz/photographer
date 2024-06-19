@@ -44,7 +44,7 @@ const ImageSlider = ({ images,loading }: Props) => {
             key={index}
               src={singleImage}
               alt="image_slider"
-              className="h-vh100 w-full object-cover object-center  sm_:h-vh50 md_:h-vh60 lg2_:h-vh80 lg_:h-vh80"
+              className="h-vh100 w-full object-cover object-center  sm_:h-vh50 md_:h-vh60 lg2_:h-vh80 lg_:h-vh80 sm_3:min-h-vh80"
             />
           </SwiperSlide>
         ))}

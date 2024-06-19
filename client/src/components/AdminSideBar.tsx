@@ -15,14 +15,14 @@ const AdminSideBar = (props: Props) => {
         Slider Images
       </NavLink>
 
-      <NavLink
+      {/* <NavLink
         to="/admin/home/header"
         className={({ isActive }) =>
           isActive ? "py-1 border-b border-b-gray-500 w-full" : "py-1 w-full"
         }
       > 
         Header Images
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/admin/home/album"
         className={({ isActive }) =>

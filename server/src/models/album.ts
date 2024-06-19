@@ -30,6 +30,8 @@ const Schema = new mongoose.Schema({
     }
 
 
+},{
+    timestamps:true
 })
 
 const SingleAlbum = mongoose.model("singleAlbum", Schema);
