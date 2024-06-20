@@ -14,48 +14,48 @@ import Loading from "../Loading";
 
 interface Props {
   images: string[];
-  loading:boolean
+  loading: boolean
 }
 
-const ImageSlider = ({ images,loading }: Props) => {
+const ImageSlider = ({ images, loading }: Props) => {
 
-  
+
   return (
     <>
-    <Wrapper extraStyles={`w-full m-0 ${loading ? 'opacity-0':''}`}>
-     {true && (
-      <Swiper
-      loop={true}
-        autoplay={{
-          delay: 5500,
-          disableOnInteraction: false,
-        }}
+      <Wrapper extraStyles={`w-full m-0 ${loading ? 'opacity-0' : ''}`}>
+        {images.length >=5 && (
+          <Swiper
+            loop={true}
+            autoplay={{
+              delay: 5500,
+              disableOnInteraction: false,
+            }}
 
-        speed={1500}
-        
-        
-        modules={[Pagination,Autoplay]}
-        className="mySwiper border w-full "
-      >
-        {images.map((singleImage,index) => (
-          <SwiperSlide>
-            {" "}
-            <img
-            key={index}
-              src={singleImage}
-              alt="image_slider"
-              className="h-vh100 w-full object-cover object-center  sm_:h-vh50 md_:h-vh60 lg2_:h-vh80 lg_:h-vh80 sm_3:min-h-vh80"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-     ) } 
-    </Wrapper>
-    {
-                    loading && (
-                        <Loading />
-                    )
-                }
+            speed={1500}
+
+
+            modules={[Pagination, Autoplay]}
+            className="mySwiper border w-full "
+          >
+            {(images.length >=5) ?  images.map((singleImage, index) => (
+              <SwiperSlide>
+                {" "}
+                <img
+                  key={index}
+                  src={singleImage}
+                  alt="image_slider"
+                  className="h-vh100 w-full object-cover object-center  sm_:h-vh50 md_:h-vh60 lg2_:h-vh80 lg_:h-vh80 sm_3:min-h-vh80"
+                />
+              </SwiperSlide>
+            )): (<div></div>)}
+          </Swiper>
+        )}
+      </Wrapper>
+      {
+        loading && (
+          <Loading />
+        )
+      }
     </>
   );
 };

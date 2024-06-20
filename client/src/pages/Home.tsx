@@ -2,17 +2,13 @@
 import ImageSlider from '../components/home/ImageSlider'
 import HomeMemory from '../components/home/HomeMemory'
 import HomeService from '../components/home/HomeService'
-import HomeSwiper from '../components/home/HomeSwiper'
-import HomeReview from '../components/home/HomeReview'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-interface Props {
-    
-}
 
 
-const Home = (props: Props) => {
+
+const Home = () => {
 
     const [images,setImages] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -34,12 +30,13 @@ const getHomeImages = async()  =>{
 
 useEffect(() => {
    
-    getHomeImages();
+     getHomeImages();
 
 }, [])
     return (
         <div className='w-full flex flex-col'>
-            <ImageSlider   images={images} loading = {isLoading} /> 
+             <ImageSlider   images={images} loading = {isLoading} /> 
+            
              <HomeMemory  />
              <HomeService />
              {/* <HomeSwiper/> */}

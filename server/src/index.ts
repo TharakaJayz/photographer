@@ -49,7 +49,7 @@ app.use("/album",albumRoutes);
 try {
     mongoose.connect("mongodb+srv://tharakaprabhath300:STfuriOsxXMja3nN@clusterphotograpghy.kysizud.mongodb.net/?retryWrites=true&w=majority&appName=ClusterPhotograpghy");
 
-    app.listen(8080, () => {
+    app.listen(process.env.PORT || 8080, () => {
         console.log("connected on 8080");
     })
 
