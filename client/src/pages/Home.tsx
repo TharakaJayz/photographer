@@ -18,7 +18,7 @@ const getHomeImages = async()  =>{
 
     try {
 
-        const imagesHome:any = await axios.get("http://localhost:8080/home/get_home_slider");
+        const imagesHome:any = await axios.get(`${process.env.REACT_APP_BASE_UR ||'http://localhost:8080'}/home/get_home_slider`);
         setImages(imagesHome.data);
        setIsLoading(false);
         

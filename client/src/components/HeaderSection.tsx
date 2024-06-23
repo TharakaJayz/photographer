@@ -9,11 +9,11 @@ interface Props {
 
 const HeaderSection = (props: Props) => {
   return (
-    <div className="w-full   flex flex-col justify-between gap-vh5 mb-vh3 ">
+    <div className="w-full   flex flex-col justify-between gap-vh5 mb-vh3  sm_3:justify-start sm_3:items-start">
       <img
         src={props.imgUrl || ""}
         alt="img"
-        className="w-full h-auto object-cover object-center sm_3:min-h-vh80 "
+        className="w-full h-auto object-cover object-center sm_3:h-vh70  bg-red-300 "
       />
       {props.TextLogic && (
         // <div className="flex flex-col h-vh20 justify-start pt-vh2 text-center gap-vh2">
