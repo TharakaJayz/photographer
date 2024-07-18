@@ -1,7 +1,7 @@
 import  { useEffect, useState } from 'react'
-import amlilaLogo from "../assets/amelia_logo.png";
 import { IoMenu } from "react-icons/io5";
 import { NavLink, useNavigate } from 'react-router-dom';
+import Logo from './Logo';
 
 
 type props = {
@@ -29,10 +29,10 @@ const Navbar = (props:props) => {
   
 
     return (
-        <div className= {`  w-full   bg-navcolor  py-vh2   fixed top-0 left-0 opacity-0  z-40 ${props.extraStyle} ${isLoading ? '':''} `}>
+        <div className= {`  w-full  bg-navcolor  py-vh2   fixed top-0 left-0 opacity-0  z-40 ${props.extraStyle} ${isLoading ? '':''} `}>
             <div className=' w-full h-full flex items-center justify-between   lg_:flex-col'>
                 <section className='flex justify-between lg_:w-full px-vw5 '>
-                <img src={amlilaLogo} alt='amelia logo' className='w-vw10 min-w-px75' />
+                <Logo/>
                 <button className='  lg_:block hidden text-white text-2xl'  onClick={()=>{setNavSecLogic(!navSecLogic);  }}><IoMenu /></button>
                 </section>
 

@@ -20,8 +20,6 @@ module.exports = {
         "2xl_": { max: "1535px" },
 
         xl_: { max: "1279px" },
-
-        
         xl2_: { max: "1150px" },
         xl3_: { max: "1200px" },
        
@@ -32,9 +30,9 @@ module.exports = {
 
         md_: { max: "767px" },
 
+        sm_: { max: "639px" },
         sm_3: { max: "440px" },
         sm_2: { max: "420px" },
-        sm_: { max: "639px" },
       },
       spacing: {
         px1: "1px",

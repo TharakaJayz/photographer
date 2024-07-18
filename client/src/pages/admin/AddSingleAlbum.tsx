@@ -106,7 +106,7 @@ const AddSingleAlbum = (props: Props) => {
   return (
     <div className="min-h-vh100 w-full  flex flex-col justify-start items-start ">
       <div className=' flex justify-start items-start w-full border  h-vh100 '>
-        <div className='w-p50  h-full flex flex-col gap-vh2 bg-gray-200 px-vw1'>
+        <div className='w-p50  h-full flex flex-col gap-vh1 bg-gray-200  px-vw1'>
 
           <div className='w-full flex flex-col gap-1 py-vh1'>
             <label className='text-xs'>AlbumType</label>
@@ -193,7 +193,7 @@ const AddSingleAlbum = (props: Props) => {
 
 
           </div>
-          <div className='w-full flex justify-between items-center h-vh25 '>
+          <div className='w-full flex justify-between items-center h-vh25  '>
 
             <div className='w-p45 flex justify-between items-center  py-vh1'>
               <div className='w-p80 flex flex-col  gap-1' >
@@ -213,7 +213,7 @@ const AddSingleAlbum = (props: Props) => {
 
             </div>
             {singleAlbumImage !== "" && (
-              <img src={singleAlbumImage} alt='title_ig' className='w-p40 max-h-full ' />
+              <img src={singleAlbumImage} alt='title_ig' className='w-auto h-p100  object-contain' />
             )}
 
 
