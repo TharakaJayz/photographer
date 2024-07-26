@@ -1,6 +1,5 @@
 import { NextFunction, Request, Response } from "express";
 import HomeImages from '../models/homeSlider';
-import { images } from '../../../client/src/assets/Images';
 
 export const homeImageSliderCreate = async (req: Request, res: Response, next: NextFunction) => {
     const images: [] = req.body.images;
@@ -15,11 +14,10 @@ export const homeImageSliderCreate = async (req: Request, res: Response, next: N
     try {
 
         const homeImages = new HomeImages({ images: images })
-
         const Id = "6652bd34e7e5afb6fb5bb6ba";
 
         // const homeSliderResponse = await homeImages.save();
-        const homeSliderResponse = await HomeImages.findByIdAndUpdate(
+        await HomeImages.findByIdAndUpdate(
             { _id: Id },
             {
                 $set: {

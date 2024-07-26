@@ -10,7 +10,6 @@ export const Login = async (req:Request,res:Response,next:NextFunction)  =>{
     const userName = req.body.username;
     const password = req.body.password;
 
-  
 
     if(!userName || !password){
         res.status(400).send("Username or Password Can not empty");

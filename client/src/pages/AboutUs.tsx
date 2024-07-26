@@ -1,6 +1,5 @@
-import React from "react";
 import HeaderSection from "../components/HeaderSection";
-import { images, images2 } from "../assets/Images";
+import { images } from "../assets/Images";
 import { Wrapper } from "../components/Wrapper";
 
 interface Props {}
@@ -24,7 +23,7 @@ const AboutUs = (props: Props) => {
           </section> */}
           <section className="w-auto h-full  flex items-center justify-center"> 
           
-            <img src="https://lh3.googleusercontent.com/pw/AP1GczMXQdEh6rAUTRTpgm-Q3-uLZt5ssQKcc1Abz86icg7cFeoHDoCL5Y3sz24shjrGZQsrjshCsD2D8ttIF-kvrDsVX8IGDpNiCPMvxTAlFngMASbdlFELF9R6esWLyuO-Y_gjYRPmEtfz2zzQihQBVScrqnJUwGVJ54Vvx2n5u7Wkw_wrRL0CXPxJ1T389jKHGmFEgX6zqbWmGPlYEW5sV1DLa2oj-Z3Fa_tlvBpNiXL3kQjHHQpUwVp7BqhSGPq8BCqQVtSMslxCgUfGL-jZ_KKtWMp6vCMfJ6KwOgLj_FS2PVHv6ETYM5vF_rAwolBFhxT952_pGFGbZzRNsnHfPak2kQ93ZR8zQTDENsF863GIO37Dbu9QySYLa85pa3SfNSZVzyvA4i8awJzB8iQWQ1WkB-4xIJxR-zxy-iHAzvrls0JsaM-8DHHCoS1f0pURVkQZOaDo6v4nWzDGQVQDJe2np1JIVFwnJwM9hfT7slQ3YdRwK3nsyZJGdC9qDzrIhTQob7EHc_8Z-qEkFdxd-MdjtlCzfvYzWqssW8I9fTVpKVkDJ1WzYihQwpMTk47D03IlGHH2MZhnLn9XcxTHlerV9MPwFdV2p6gM_Z5kaTl3Fzt4M25ZpPUG1SLPgrpASvWHkrrc9Rpz9Elch2sU3dYYwDHe9a2kD0ixl58AVqzRibd5XFe-p8FkzCZSyBZLD30c7W3O_3oMEh_nTrNWDujTNERdzCf8G_HUWGpQHluX6zSLIrROW2HFiZurVFviPKUDJqCvuQ7Juu1t56_5FlSgL50cNeMVphlbcIjMRayPGYPY1uwAVUQSLuWR8AQO44UYaveBeJDpqv7SSTDFSZLXHJMaI8Y5oTcourfKgYwKIF2spz0VsCFMorSeqBtcCIlL3MalIyumMw0g5BGheGOQxT1gxZgmuXjxqmXUrjpUkXUx489Xhi43GKUX=w609-h913-s-no-gm?authuser=0"  alt="jsyz" className="max-h-full xl3_:opacity-0 about_animation " />
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczNRBi5zuaiFpwEKUk_QpIHLK7QdzW-WlvE3FOmzbaetFd67AwWhqUHsTiigsRmVI4D1MiELutk5_aD9gcxHW0CEpZ18hCA1rcw6WAih22jhc_CC1XJMtTsErywNeXiIi3vg8OIwS2AN2w9LigbL8RqGEp2NqFduVlLYJi-UNTzkCxWon9hgkXSrB0VDFHwos1b22z6-x_SkE3qdYgW5fS-zsLlyGQJJyK3SYGeBCOT0bX6J3a8fvM0qdX1e8AewOtcpmOjvNGJJiJPpbWNZUoIciuGpuVhns4tISguy5znTrs44sxncyI6_21Nx23yjl1WDT3FRyIGhAoVOtKwUcxxo-4HIf1yYPEER0SQxt-BEIZfwymdiw-YUnrb7HtZftlHXq4mk3RXPllgpqnMgeG58HzqDRaxCFxPoXgpgkQhzNTEHIOvv9nfYOihuN7erz_HrnE6GKfCd6gHlB0Bs0OQ7QgCgQAi6hm7dFtUthmlOwOmVTnfnYLv9bS_Ijfh1ydQ54Le4mv-nW9_AZDaAicvlMF5Ss-rjSNMKXPe1V1H4JK15lfau294nEVGtcZei3P1cdw5Sv_Yuopp-gzUqTqsr01jljiLRoU_xccdgkhhy-ce2yH51l8j6qktHNFcTj-xmkNtkWy6OgModLiK3WYg16CX8UTwxx0PnFzCgT-9nMHysansvIaFiPTpezDChwy_w_OYSh2daMeb0Af7sX_xkhyaqBC9FJSP4KHLKtfPJBp4URWdxn9DlXg-MZc5eQHQw8MUDnrllgpRGq2B4zKvlcESCCoTFL4LC9gecsLkLlRJS4he1uUmofhvti-EQZCKN2TM_wNIY4AerrI7cfPhHevGL3sRYqsgSeGet4KhfGU4ZA5qyffEN1P_zu77yXU6Zj0EpFYIprxyYAADhRIRsUYt1_eBhaAmQ8ipkkcHcUdGVBRUpH69NxA0=w609-h913-s-no-gm?authuser=0"  alt="jsyz" className="max-h-full xl3_:opacity-0 about_animation  xl2_:w-full  bg-red-400 " />
           </section>
           <section className="w-p50 xl2_:w-full   text-white flex flex-col justify-start items-center gap-vh3 xl2_:bg-primary xl2_:px-vw5 xl2_:py-vh12 xl2_:rounded-xl">
             
